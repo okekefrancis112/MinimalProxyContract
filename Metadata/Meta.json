@@ -1,0 +1,24 @@
+{
+    "description": "This NFT is a prove that i completed my web3bridge test and created an ERC721 token with ipfs",
+    "external_url": "https://twitter.com/okekefrancis112_",
+    "image": "https://gateway.pinata.cloud/ipfs/QmQ21r7vt9PT78wKoGgoiopgYyegkMZTHs6QeXZchqQZZr",
+    "name": "Unicorn",
+    "attributes": [
+      {
+        "trait_type": "Group",
+        "value": "Unicorn"
+      },
+      {
+        "trait_type": "Cause",
+        "value": "BlockDaemon Hackaton"
+      },
+      {
+        "trait_type": "Token Standard",
+        "value": "ERC721"
+      },
+      {
+        "trait_type": "Date",
+        "value": "20th September 2022"
+      }
+    ]
+  }
