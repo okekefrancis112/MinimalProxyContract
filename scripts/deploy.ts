@@ -36,6 +36,10 @@ import { ethers } from "hardhat";
 // }
 
 async function main() {
+
+  const myAddr = "0x23d5C0bAdf63ff6422B5B9310211d9BcE147e720";
+  const ipfsMetadataCid = "ipfs//QmQ21r7vt9PT78wKoGgoiopgYyegkMZTHs6QeXZchqQZZr"
+
   // const Auction = await ethers.getContractFactory("Auction");
   const Nft = await ethers.getContractFactory("Nft");
 
@@ -44,6 +48,12 @@ async function main() {
 
   // await auction.deployed();
   await nft.deployed();
+  const mint = await nft.safeMint(myAddr, ipfsMetadataCid);
+
+  // Checking the number of NFT minted
+  console.log("Checking Balance....");
+  const balanceOF = await nft.balanceOf(myAddr);
+
 
   // const AuctionProxyFactory = await ethers.getContractFactory("AuctionProxyFactory");
   const NftProxyFactory = await ethers.getContractFactory("NftProxyFactory");
@@ -58,6 +68,8 @@ async function main() {
   // console.log(apf.address, "Minimal Proxy Auction Factory contract address");
 
   console.log(nft.address, "Nft base contract address");
+  console.log("You minted", mint);
+  console.log("Number of NFTs: ", balanceOF);
   console.log(npf.address, "Minimal Proxy Nft Factory contract address");
 }
 
